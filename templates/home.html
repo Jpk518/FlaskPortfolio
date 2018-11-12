@@ -1,13 +1,490 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Josh Kearney Portfolio Page</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/main.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/bootstrap.min.css')}}" />
+    <style>  
+        .img {
+            width: 90%;
+            height:12.5em;
+            object-fit:scale-down;
+        }
+        .wrapper{
+            display:grid; 
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap:1em;
+        }
+        .box{
+            grid-column:1/7;
+            text-align: center;
+        }
+        .wrapper2{
+            display:grid; 
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap:1em;
+            justify-items:stretch;
+            align-items:stretch;
+        }
+        .projBox1{
+            grid-column:1;
+            grid-row:1
+        }
+        .projBox2{
+            grid-column:2;
+            grid-row:1
+        }
+        .wrapper3{
+            display:grid;
+            text-align: center;
+            justify-items: center;
+        }
+    </style>
+</head>
 
-{% block content %}
-    {% for workplace in workplaces %}
-        <h1>{{workplace.Title}}</h1>
-        <p>This company is: {{workplace.About}}</p>
-    {% endfor %}
+<body style="background-color:#2f3542">
+    <div class="container">
+        <!--Links Section-->
+        <ul class="list-unstyled list-inline text-center" style="margin-top: 6vh">
+            <li class="list-inline-item"><a href="https://www.goodreads.com/user/show/41209622-josh-kearney"><img src="static/img/book_animated.svg" /></a></li>
+            <li class="list-inline-item"><a href="https://www.linkedin.com/in/joshua-kearney/"><img src="static/img\linkedin_animated.svg" /></a></li>
+            <li class="list-inline-item"><a href="https://github.com/Jpk518"><img src="static/img\github_animated.svg" /></a></li>
+            </ul>
 
-    {% for project in projects %}
-    <h1>{{project.Title}}</h1>
-    <p>This project is: {{project.About}}</p>
-{% endfor %}
-{% endblock %}
+        <!--Main Box Section-->
+        <div class="card box-shadow" style=" margin-top: 4vh;  margin-bottom: 10vh; background-color: #F5F5F5; ">
+            <div class="row" style="padding-top: 5vh;">
+                <div class=" offset-sm-0 offset-md-2 offset-lg-2 col-sm-12 col-md-6 col-lg-6">
+                    <h1 class="text-center text-lg-right">Joshua Kearney</h1>
+                    <h4 class="text-center text-lg-right" style="font-size: 100%">Tinkerer  |  Self-Starter  |  Student</h4>
+                    <a href="Resume.pdf"><h4 class="text-center text-lg-right" style="font-size: 100%">Resume</h4></a>
+                    </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 text-center">
+                    <img src="static/img\Josh.jpg" class="img-responsive box-shadow" style=" border-radius: 50%; max-width: 60%; height: auto;" />
+                    </div>
+                </div>
+            <div class="row" style="padding-top: 3em;">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <p>Senior Engineering student always looking for new and exciting opportunities. Experience includes robotics, embedded programming, aerospace, military communication systems, and armored vehicles.</p>
+                    </div>
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <p>Passionate about thinking up and designing leading edge technology such as robotic vehicles and hyperloop transport. My free time also includes <a href="https://www.goodreads.com/user/show/41209622-josh-kearney"> reading </a> about the latest in artificial intelligence and science.</p>
+                    </div>
+                </div>
+            <div class="wrapper">
+                <div  style = "padding-top:1em;grid-column:1/3">
+                    <a href="#work-sec" style="text-decoration: none;">
+                        <div class="card zoom text-center" style="height:25vh; padding-top:5em;">
+                            <h2 style="color:black">Work</h2>
+                        </div>
+                    </a>
+                </div>
+                <div style = "padding-top:1em;grid-column:3/5">
+                    <a href="#proj-sec" style="text-decoration: none">
+                        <div class="card text-center zoom" style="height:25vh; padding-top:5em;">
+                            <h2 style="color:black">Projects</h2>
+                        </div>
+                    </a>
+                </div>
+                <div style = "padding-top:1em;grid-column:5/7">
+                    <a href="#Contact" style="text-decoration: none">
+                        <div class="card text-center zoom" style="height:25vh; padding-top:5em;"><h2 style="color:black">Contact Me</h2></div>
+                    </a>
+                </div>
+                </div>
+            </div>
+
+        <!--Work Section-->
+        <div class=" work-sec" id="work-sec" style="padding-top: 4em;">
+            <!--Work Box-->
+            <div class="card box-shadow" id="Work" style="margin-bottom: 4em; background-color: #F5F5F5;">
+                <div class="wrapper" >
+                    <!--Title Box-->
+                    <div class="box"><h1 class="text-center">Work Experience</h1></div>
+                    <!--GDMS Box-->
+                    <div style="padding-top:1em; grid-column:1/3;">
+                        <a href="#" style="text-decoration:none; color:black; outline:none;" data-toggle="modal" data-target="#myModal1">
+                            <div class="card zoom">
+                                <div class="wrapper3">
+                                    <div>
+                                        <img src="static/img\GDMSLogo.png" class="img-responsive img"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--Duxion Box-->
+                    <div style="padding-top:1em; grid-column:3/5;">
+                        <a href="#" style="text-decoration: none; color: black; outline: none;" data-toggle="modal" data-target="#myModal1">
+                            <div class="card zoom">
+                                <div class="wrapper3">
+                                    <div>
+                                        <img src="static/img\duxionlogo.png" class="img-responsive img" />
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--Kraken Box-->
+                    <div style="padding-top:1em; grid-column:5/7;">
+                        <a href="#" style="text-decoration: none; color: black; outline: none;" data-toggle="modal" data-target="#myModal2">
+                            <div class="card zoom wrapper3">
+                                <div>
+                                    <img src="static/img\krakenlogo.jpg" class="img-responsive img"/>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--Rheinmetall Box-->
+                    <div style="padding-top:1em; grid-column:2/4;">
+                        <a href="#" style="text-decoration: none; color: black; outline: none;" data-toggle="modal" data-target="#myModal3">
+                            <div class="card zoom wrapper3">
+                                <div>
+                                    <img src="static/img\rheinmetalllogo.png" class="img-responsive img" />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--Bell Box-->
+                    <div style="padding-top:1em; grid-column:4/6;">
+                        <a href="#" style="text-decoration: none; color: black; outline: none;" data-toggle="modal" data-target="#myModal4">
+                            <div class="card zoom wrapper3">
+                                <div>
+                                    <img src="static/img\BellLogo.png" class="img-responsive img"/>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div><!--Wrapper Close-->
+                    <!--Duxion Modal Box-->
+                    <div class="modal fade" id="myModal1" role="dialog"  style="padding-top: 10vh;" >
+                        <div class="modal-dialog" style=" margin: auto;">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header" >
+                                    <h1>Duxion Motors</h1>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-12 col-lg-6" style="padding-top:2vh;">
+                                            <p style=""><strong>
+                                                DuXion is developing a high-specific power electric propulsion unit that scales to larger scale aircraft requirements. The technology will package effectively into existing frames for initial hybrid-electric solutions and will be ready for an all electric solution when supporting technologies reach market.
+                                                </strong></p>
+                                            <h5 style="padding-top:2vh;">
+                                                Technical Accomplishments
+                                                </h5>
+                                            <ul>
+                                                {% for Accomplishment in workplaces[1].Accomplishments %}
+                                                <li>{{Accomplishment}}</li>
+                                                {% endfor %}
+                                                </ul>
+                                            </div>
+                                        <div class="col-sm-12 col-md-12 col-lg-6" style="padding-top:2vh;padding-bottom:5vh">
+                                            <img src="static/img\sunset.jpg" class="img-responsive box-shadow zoom" style="border-radius: 1%; max-width: 100%; height: auto;" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!--Kraken Modal Box-->
+                    <div class="modal fade" id="myModal2" role="dialog" style="padding-top: 10vh;">
+                        <div class="modal-dialog"  style=" margin: auto;">
+        
+                            <!-- Modal content-->
+                            <div class="modal-content ">
+                                <div class="modal-header">
+                                    <h1>Kraken Robotics</h1>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-12 col-lg-6" style="padding-top:2vh">
+                                            <p style=""><strong>Kraken Robotics Inc. is a marine technology company engaged in the design, development and marketing of advanced sensors, software and underwater robotics for Unmanned Maritime Vehicles used in military and commercial applications.</strong></p>
+                                            <h5 style="padding-top:3vh;">
+                                                Technical Accomplishments
+                                                </h5>
+                                            <ul>
+                                                {% for Accomplishment in workplaces[2].Accomplishments %}
+                                                <li>{{Accomplishment}}</li>
+                                                {% endfor %}
+                                                </ul>
+                                            </div>
+                                        <div class="col-sm-12 col-md-12 col-lg-6" style="padding-top:2vh; padding-bottom:5vh;">
+                                            <img src="static/img\kraken.jpg" class="img-responsive box-shadow zoom" style="border-radius: 1%;max-width: 100%; height: auto; "/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!--Rheinmetall Modal Box-->
+                    <div class="modal fade" id="myModal3" role="dialog" style="padding-top: 10vh;">
+                        <div class="modal-dialog" style=" margin: auto;">
+        
+                            <!-- Rheinmetall Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1>Rheinmetall Landsysteme</h1>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-12 col-lg-6" style="padding-top:2vh">
+        
+                                            <p><strong>
+                                                Rheinmetall stands for many years of experience and innovation in armored vehicles. The Rheinmetall Group’s Defence sector is regarded in the defense and security industry as a leading provider of innovative products for German and international armed forces for its effectiveness and protection.
+                                            </strong></p>
+        
+                                            <h5 style="padding-top:3vh;">
+                                                Technical Accomplishments
+                                            </h5>
+                                            <ul>
+                                                {% for Accomplishment in workplaces[3].Accomplishments %}
+                                                <li>{{Accomplishment}}</li>
+                                                {% endfor %}
+                                            </ul>
+        
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-lg-6"  style="padding-top:2vh; padding-bottom:5vh ">
+                                            <img src="static/img\rhein.jpg" class="img-responsive box-shadow zoom" style="border-radius: 1%;max-width: 100%; height: auto; "/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Bell Modal Box-->
+                    <div class="modal fade" id="myModal3" role="dialog" style="padding-top: 10vh;">
+                        <div class="modal-dialog" style=" margin: auto;">
+                            <!-- Rheinmetall Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1>Bell Aliant</h1>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-12 col-lg-6" style="padding-top:2vh">
+        
+                                            <p><strong>
+                                                Rheinmetall stands for many years of experience and innovation in armored vehicles. The Rheinmetall Group’s Defence sector is regarded in the defense and security industry as a leading provider of innovative products for German and international armed forces for its effectiveness and protection.
+                                            </strong></p>
+        
+                                            <h5 style="padding-top:3vh;">
+                                                Technical Accomplishments
+                                            </h5>
+                                            <ul>
+                                                {% for Accomplishment in workplaces[4].Accomplishments %}
+                                                <li>{{Accomplishment}}</li>
+                                                {% endfor %}
+                                            </ul>
+        
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-lg-6"  style="padding-top:2vh; padding-bottom:5vh ">
+                                            <img src="static/img\rhein.jpg" class="img-responsive box-shadow zoom" style="border-radius: 1%;max-width: 100%; height: auto; "/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div><!--WorkBox Close-->
+        </div><!--Work Section Close-->
+
+        <!--Projects Section-->
+        <div class="proj-sec" id="proj-sec" style="padding-top: 5em;">
+            <!--Projects box-->
+            <div class="card box-shadow" id="Projects" style=" margin-bottom: 10em; padding-bottom: 2em; background-color: #F5F5F5">
+
+                <div class="wrapper" style="padding-top: 1em">
+                    <div class="box">
+                        <h1 class="text-center">Projects</h1>
+                    </div>
+                    <!--EER Box-->
+                    <div style="padding-top:1em;grid-column:1/3">
+                        <a href="#" style="text-decoration:none; color:black; outline:none;" data-toggle="modal" data-target="#myModal5">
+                            <div class="card zoom">
+                                <div class="wrapper3">
+                                    <div>
+                                        <img src="static/img/eerlogo.png" class="img-responsive img"  style="width: 80%;"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--Paradigm Box-->
+                    <div style = "padding-top:1em; grid-column:3/5">
+                        <a href="#" style="text-decoration: none; color: black; outline: none;" data-toggle="modal" data-target="#myModal6">
+                            <div class="card zoom">
+                                <div class="wrapper3">
+                                    <div>
+                                        <img src="static/img/paradigmlogo.jpg" class="img-responsive img" style="width: 65%;" />
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--Personal Projects Box-->
+                    <div style = "padding-top:1em;grid-column:5/7">
+                        <a href="#" style="text-decoration: none; color: black; outline: none;" data-toggle="modal" data-target="#myModal7">
+                            <div class="card zoom" style="height:15em">
+                                <div class="wrapper3">
+                                    <h3>Personal Projects</h3>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item borderless">Portfolio Website</li>
+                                        <li class="list-group-item">Magnetic Reading Lamp</li>
+                                        <li class="list-group-item">Custom Oak Wall Sign</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!--EER Modal Box-->
+                    <div class="modal fade" id="myModal5" role="dialog" style="padding-top: 10vh;">
+                        <div class="modal-dialog modal-large" style="margin: auto;">
+
+                            <!-- EER Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1>Eastern Edge Robotics</h1>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-12 col-lg-6" style="padding-top: 1vh">
+                                            <p ><strong>
+                                                Eastern Edge Robotics is the internationally competing Robotics team from Memorial University of Newfoundland. The team has placed 1st internationally developing a robot for NASA to traverse Jupiter's moon. Currently the team is developing a robot for the 2018 competition in Seattle.
+                                            </strong></p>
+
+                                            <h5 style="padding-top:1vh;">
+                                                Technical Accomplishments
+                                            </h5>
+
+                                                <ul>
+                                                    {% for Accomplishment in projects[0].Accomplishments %}
+                                                    <li> {{Accomplishment}}</li>
+                                                    {% endfor %}
+                                                </ul>
+                                            
+
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-lg-6" style="padding-top:5vh;">
+                                            <img src="static/img\vimy.jpg" class="img-responsive box-shadow" style="border-radius: 1%; max-width: 100%; height: auto; "/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    <!--Paradigm Modal Box-->
+                    <div class="modal fade" id="myModal6" role="dialog" style="padding-top: 10vh;">
+                        <div class="modal-dialog" style=" margin: auto;">
+
+                            <!-- Paradigm Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1>Paradigm Hyperloop</h1>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-12 col-lg-6" style="padding-top: 3vh">
+                                            <p><strong>
+                                                The Hyperloop is a conceptual fifth mode of transportation consisting of levitating high-speed capsules traveling through low-pressure vacuum tubes. The concept was introduced by Elon Musk in 2013 and aims to provide a cheaper, more efficient, and more sustainable alternative to existing methods of transportation.
+                                            </strong></p>
+
+                                            <h5 style="padding-top:3vh;">
+                                                Technical Accomplishments
+                                            </h5>
+                                            <ul> 
+                                                        {% for Accomplishment in projects[1].Accomplishments %}
+                                                        <li> {{Accomplishment}}</li>
+                                                        {% endfor %}
+                                            </ul>
+
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-lg-6" style="padding-bottom: 4vh;">
+                                            <img src="static/img\vacuumtrain.jpg" class="img-responsive box-shadow"  style="border-radius: 1%;max-width: 100%; height: auto; "/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    <!--Personal Projects Modal Box-->
+                    <div class="modal fade" id="myModal7" role="dialog" style="padding-top: 3vh;">
+                        <div class="modal-dialog" style=" margin: auto;">
+                            <!-- Pers. Proj. Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1>Personal Projects</h1>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                <div class="modal-body wrapper2">
+                                    <div class="projBox1 card zoom">
+                                        <h5 style="text-align: center">Custom Magnetically Controlled Reading Lamp</h5>
+                                        <ul>
+                                            <li>Designed lamination models using CorelDraw</li>
+                                            <li>Manufactured oak frame & base with a C02 Laser Engraver</li>
+                                            <li>Designed a magnetic levitation switch control to turn on and off lamp</li>
+                                            <li>Designed an electrical layout to vary lamp lighting when playing music</li>
+                                        </ul>
+                                        <img src="static/img\lamp.jpg" class="img-responsive box-shadow zoom"  style="max-width: 40%; height: auto; margin-left:8vw;"/>
+                                        </div>
+                                    <div class="projBox2 card zoom">
+                                        <h5 style="text-align: center">Custom Made Oak Wall Sign - "Planet Express"</h5>
+                                        <ul>
+                                            <li>Wooden layers designed and cut using CorelDraw software and a C02 Laser engraver</li>
+                                            <li>Sign given stained finishing to express wooden grains for a "vintage" look</li>
+                                            <li>Good news everyone! Sign painted with glow in the dark paint to light up neon green when the lights are off</li>
+                                            </ul>
+                                            <img src="static/img\futurama.jpg" class="img-responsive box-shadow zoom" style="max-width: 50%; height: auto; margin-left:10vw; "/>
+                                        </div>
+                                        <div class="box card zoom">
+                                            <h5>Engineering Team Website</h5>
+                                            <ul>
+                                                <li>https://jpk518.github.io/</li>
+                                                <li>Designed and coded developed a website to highlight design progress for an engineering design project</li>
+                                                </ul>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div><!--Project Section Close-->
+
+        <!--Contact Me Section-->
+        <div class="card box-shadow" id="Contact" style="margin-bottom: 5rem; background-color: #F5F5F5">
+            <!--Contact Me Box-->
+            <h1 class="text-center">Contact Me</h1>
+            <div>
+                <p class="text-center" style="padding-top:2em">My Number: 709-424-7450</p>
+                <p class="text-center"> My Email: jpk518@mun.ca</p>
+            </div>
+        </div><!--Contact Section Close-->
+
+        <!--Page Footer Section-->
+        <footer class="footer text-center">
+            <h1 class=" align-middle"> Joshua Kearney<small><small>&copy</small></small></h1>
+            <!--Footer Links-->
+            <ul class="list-unstyled list-inline text-center">
+                <li class="list-inline-item"><a href="https://www.goodreads.com/user/show/41209622-josh-kearney"><img src="static/img\book.svg" /></a></li>
+                <li class="list-inline-item"><a href="https://www.linkedin.com/in/joshua-kearney/"><img src="static/img\linkedin.svg" /></a></li>
+                <li class="list-inline-item"><a href="https://github.com/Jpk518"><img src="static/img\github.svg" /></a></li>
+                </ul>
+            </footer>
+        </div><!--Footer Section Close-->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

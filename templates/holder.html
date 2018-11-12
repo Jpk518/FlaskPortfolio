@@ -1,0 +1,18 @@
+
+<div class="container">
+        {% for workplace in workplaces %}
+    <h1>{{workplace.Title}}</h1>
+    <p>{{workplace.About}}</p>
+{% endfor %}
+
+{% for project in projects %}
+    <h1>{{project.Title}}</h1>
+    <p> {{project.About}}</p>
+    <ul>
+        {% for Accomplishment in project.Accomplishments %}
+        <li> {{Accomplishment}}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+</div>
+

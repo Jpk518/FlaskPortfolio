@@ -1,0 +1,41 @@
+[
+    {
+        "Title": "General Dynamics",
+        "About": "Military",
+        "Accomplishments": ["Implementing software and embedded system solutions for a smart display product line"]
+    },
+    {
+        "Title": "DuXion Motors",
+        "About": "DuXion is developing a high-specific power electric propulsion unit that scales to larger scale aircraft requirements. The technology will package effectively into existing frames for initial hybrid-electric solutions and will be ready for an all electric solution when supporting technologies reach market.",
+        "Accomplishments": ["Created propulsion system CAD models", 
+                            "Created low-fidelity analytical thermal models to perform quick thermal sizing",
+                            "Created detailed CFD analysis models to analyze system thermal performance using Ansys Fluent",
+                            "Identified thermally critical areas and system hotspots",
+                            "Researched thermal and mechanical electronic packaging solutions"]
+    },
+    {
+        "Title": "Kraken Robotics Inc.",
+        "About": "Kraken Robotics Inc. is a marine technology company engaged in the design, development and marketing of advanced sensors, software and underwater robotics for Unmanned Maritime Vehicles used in military and commercial applications.",
+        "Accomplishments": ["Developed a proprietary underwater electronic packaging system to protect transducers in an AUV vehicle", 
+                            "Conducted research on polymers to test and analyze optimal adhesion methods underwater",
+                            "Reduced cost on AUV vehicle fins by 90% through implementing an in-house injection molding process",
+                            "Programmed Sensor Testing using Arduino programming language",
+                            "Set up, launched, and recovered an AUV vehicle during open sea trials"]
+    },
+    {
+        "Title": "Rheinmetall Landsysteme",
+        "About": "Rheinmetall stands for many years of experience and innovation in armored vehicles. The Rheinmetall Group’s Defence sector is regarded in the defense and security industry as a leading provider of innovative products for German and international armed forces for its effectiveness and protection.",
+        "Accomplishments": ["Developed a proprietary electronic packaging system to protect the Puma IFV battle tank communication network", 
+                            "Created project CAD models and drawings to GD&T standardization",
+                            "Environmental tested military systems to military standard guidelines (MIL-STD-810)",
+                            "Created electrical military safety equipment",
+                            "Organized engineering project meetings"]
+    },
+    {
+        "Title": "Bell Canada",
+        "About": "Radio/Telephone Company",
+        "Accomplishments": ["Handheld component modification of LCD displays and circuit boards for handheld radios", 
+                            "Designed and manufactured ruggedized electronic enclosures for industrial mobile radios",
+                            "Microscopic soldering"]
+    }
+]

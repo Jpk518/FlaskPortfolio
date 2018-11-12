@@ -1,0 +1,52 @@
+.titanic {
+    float: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li.borderless { border-top: 0 none; }
+
+.card {
+    padding: 20px;
+}
+
+.btn {
+    background-color: white;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.btn:focus,
+.btn:active {
+    box-shadow: none;
+}
+
+.zoom {
+    transition: .2s;
+}
+
+.zoom:hover {
+    transform: scale(1.02);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    -webkit-box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+    box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+    box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+}
+
+.footer {
+    background-color: #2f3542;
+    padding: 10px;
+    color: white;
+}
+
+

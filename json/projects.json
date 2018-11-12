@@ -1,0 +1,21 @@
+[
+    {
+        "Title": "Eastern Edge Robotics",
+        "About": "Eastern Edge Robotics is the internationally competing Robotics team from Memorial University of Newfoundland. The team has placed 1st internationally developing a robot for NASA to traverse Jupiter's moon. Currently the team is developing a robot for the 2018 competition in Seattle.",
+        "Accomplishments": ["Programmed distributed system control software using C++ on a Linux environment", 
+                            "Programmed embedded system communication software using C++, C, and Arduino",
+                            "Created underwater electronic packaging for raspberry pi camera modules",
+                            "Designed and manufactured an underwater robotic vehicle chassis",
+                            "Competed in 2017 International Robotics Competition (Long Beach, CA), placing 5th"]
+    },
+    {
+        "Title": "Paradigm Hyperloop",
+        "About": "The Hyperloop is a conceptual fifth mode of transportation consisting of levitating high-speed capsules traveling through low-pressure vacuum tubes. The concept was introduced by Elon Musk in 2013 and aims to provide a cheaper, more efficient, and more sustainable alternative to existing methods of transportation.",
+        "Accomplishments": ["Created a dynamic model in MatLab & Simulink to perform vehicle motion analysis and calculate pod forces",
+                            "Designed overall system stability and individual component stability module"]
+    },
+    { "Title": "Personal Projects",
+        "About": "Robotics",
+        "Accomplishments": ["Software"]
+    }
+]
